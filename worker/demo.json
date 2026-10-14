@@ -1,0 +1,218 @@
+[
+  {
+    "userId": "demo-user-plomeria",
+    "profile": {
+      "id": "demo-plomeria",
+      "name": "Luis Mendoza",
+      "category": "Plomería",
+      "location": "Maiquetía",
+      "areas": ["Maiquetía", "Urimare", "Carlos Soublette"],
+      "experience": 12,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Instalación y reparación de tuberías, cambio de griferías, detección de filtraciones y mantenimiento de tanques.\n\nTRAYECTORIA LABORAL\n2014–2018 · Ayudante de mantenimiento residencial.\n2018–actualidad · Plomero independiente para viviendas y pequeños comercios.\n\nFORMACIÓN\nFormación práctica en instalaciones sanitarias y mantenimiento preventivo.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Reparó una filtración y explicó cómo cuidar la instalación."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-albanileria",
+    "profile": {
+      "id": "demo-albanileria",
+      "name": "Carlos Salazar",
+      "category": "Albañilería",
+      "location": "Catia La Mar",
+      "areas": ["Catia La Mar", "Carayaca", "El Junko"],
+      "experience": 15,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Reparación de paredes, colocación de cerámica, frisos, pisos y pequeñas remodelaciones.\n\nTRAYECTORIA LABORAL\n2011–2017 · Oficial de obra en remodelaciones residenciales.\n2017–actualidad · Trabajos independientes de albañilería y acabados.\n\nFORMACIÓN\nCapacitación práctica en lectura de medidas, nivelación y acabados.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Dejó el piso nivelado y el área de trabajo ordenada."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-estilismo",
+    "profile": {
+      "id": "demo-estilismo",
+      "name": "Mariana Rivas",
+      "category": "Estilismo y barbería",
+      "location": "Macuto",
+      "areas": ["Macuto", "La Guaira", "Caraballeda"],
+      "experience": 8,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Cortes para damas y caballeros, arreglo de barba, peinados y asesoría de cuidado capilar. Atención a domicilio previa coordinación.\n\nTRAYECTORIA LABORAL\n2018–2021 · Estilista en salón de belleza.\n2021–actualidad · Servicio independiente de estilismo y barbería.\n\nFORMACIÓN\nCursos de corte, colorimetría básica e higiene de herramientas.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Escuchó lo que quería y me orientó con el corte."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-pintura",
+    "profile": {
+      "id": "demo-pintura",
+      "name": "José Fuentes",
+      "category": "Pintura",
+      "location": "La Guaira",
+      "areas": ["La Guaira", "Carlos Soublette", "Macuto"],
+      "experience": 10,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Pintura interior y exterior, preparación de superficies, sellado de grietas y acabados decorativos.\n\nTRAYECTORIA LABORAL\n2016–2020 · Pintor en mantenimiento de edificios.\n2020–actualidad · Pintura residencial y comercial por proyecto.\n\nFORMACIÓN\nFormación práctica en preparación de superficies y aplicación de recubrimientos.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Protegió los muebles y dejó un acabado uniforme."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-electricidad",
+    "profile": {
+      "id": "demo-electricidad",
+      "name": "Andrea Márquez",
+      "category": "Electricidad",
+      "location": "Urimare",
+      "areas": ["Urimare", "Maiquetía", "Catia La Mar"],
+      "experience": 9,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Instalación de luminarias y tomacorrientes, revisión de circuitos y mantenimiento de instalaciones eléctricas residenciales.\n\nTRAYECTORIA LABORAL\n2017–2022 · Técnica de mantenimiento residencial.\n2022–actualidad · Electricista independiente.\n\nFORMACIÓN\nFormación técnica en electricidad residencial y seguridad en el trabajo.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Explicó la falla y las opciones antes de comenzar."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-costura",
+    "profile": {
+      "id": "demo-costura",
+      "name": "Elena Pacheco",
+      "category": "Costura",
+      "location": "Caraballeda",
+      "areas": ["Caraballeda", "Naiguatá", "Caruao"],
+      "experience": 18,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Ajustes de ropa, confección de uniformes, reparación de cierres, ruedos y elaboración de cortinas.\n\nTRAYECTORIA LABORAL\n2008–2016 · Costurera en taller de confección.\n2016–actualidad · Taller independiente de arreglos y prendas por encargo.\n\nFORMACIÓN\nCursos de patronaje, manejo de máquinas y confección de prendas.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Los ajustes quedaron cómodos y cuidó cada detalle."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-carpinteria",
+    "profile": {
+      "id": "demo-carpinteria",
+      "name": "Miguel Romero",
+      "category": "Carpintería",
+      "location": "Carayaca",
+      "areas": ["Carayaca", "El Junko", "Catia La Mar"],
+      "experience": 14,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Muebles a medida, reparación de puertas, instalación de repisas y mantenimiento de piezas de madera.\n\nTRAYECTORIA LABORAL\n2012–2018 · Carpintero en taller de mobiliario.\n2018–actualidad · Diseño y fabricación independiente por encargo.\n\nFORMACIÓN\nAprendizaje de taller en ensamblaje, medición y acabados de madera.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "La repisa quedó a la medida del espacio que necesitaba."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-refrigeracion",
+    "profile": {
+      "id": "demo-refrigeracion",
+      "name": "Daniela Torres",
+      "category": "Refrigeración",
+      "location": "Carlos Soublette",
+      "areas": ["Carlos Soublette", "Maiquetía", "La Guaira"],
+      "experience": 7,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Mantenimiento de aires acondicionados, limpieza de unidades, diagnóstico de fallas y revisión de equipos de refrigeración doméstica.\n\nTRAYECTORIA LABORAL\n2019–2023 · Asistente técnica de refrigeración.\n2023–actualidad · Mantenimiento independiente de equipos domésticos.\n\nFORMACIÓN\nFormación técnica en refrigeración y mantenimiento preventivo.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Realizó el mantenimiento y explicó cuándo repetirlo."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  },
+  {
+    "userId": "demo-user-limpieza",
+    "profile": {
+      "id": "demo-limpieza",
+      "name": "Rosa Méndez",
+      "category": "Limpieza",
+      "location": "Naiguatá",
+      "areas": ["Naiguatá", "Caruao", "Caraballeda", "Macuto"],
+      "experience": 6,
+      "phone": "",
+      "avatar": "",
+      "photos": [],
+      "description": "Limpieza de hogares y oficinas, limpieza profunda de cocinas y baños y organización básica de espacios.\n\nTRAYECTORIA LABORAL\n2020–2023 · Auxiliar de limpieza en oficinas.\n2023–actualidad · Servicio independiente para hogares y pequeños negocios.\n\nFORMACIÓN\nCapacitación práctica en uso de productos y cuidado de superficies.",
+      "testimonials": [
+        {
+          "name": "Cliente de ejemplo",
+          "text": "Fue puntual y dejó los espacios limpios y organizados."
+        }
+      ],
+      "demo": true,
+      "status": "published",
+      "hidden": false
+    }
+  }
+]

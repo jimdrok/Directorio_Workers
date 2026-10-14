@@ -47,3 +47,9 @@ TypeScript usa modo estricto y rechaza variables y parámetros no utilizados. El
 ## Formato del código
 
 Usar `npm run format` antes de entregar cambios y `npm run format:check` para comprobar consistencia. Prettier aplica sangría de dos espacios y líneas de hasta 100 columnas. Mantener componentes con una responsabilidad y preferir props tipadas explícitamente.
+
+## Backend de Cloudflare
+
+`worker/index.ts` implementa el mismo contrato HTTP que Python para despliegues en Workers. El Durable Object `Directory` conserva usuarios, sesiones, categorías y perfiles. `worker/storage.ts` fragmenta los valores grandes para almacenar imágenes sin superar el límite por valor de KV. Las mutaciones de perfiles y categorías se realizan en transacciones; el ocultamiento administrativo se toma del registro persistido y no del cuerpo del cliente. `wrangler.jsonc` dirige `/api/*` al Worker antes del fallback de la SPA.
+
+El MVP usa una sola instancia de directorio. A mayor volumen, separar índices de búsqueda y archivos de imágenes en almacenamiento específico, manteniendo el contrato de API del frontend.

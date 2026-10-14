@@ -11,9 +11,11 @@
     "start": "python3 server.py",
     "typecheck": "tsc --noEmit",
     "test": "python3 -m unittest discover -s tests -v",
-    "format": "prettier --write src scripts index.html vite.config.ts tsconfig.json package.json",
-    "format:check": "prettier --check src scripts index.html vite.config.ts tsconfig.json package.json",
-    "seed:demo": "python3 scripts/seed_demo.py"
+    "format": "prettier --write src worker scripts index.html vite.config.ts tsconfig.json package.json",
+    "format:check": "prettier --check src worker scripts index.html vite.config.ts tsconfig.json package.json",
+    "seed:demo": "python3 scripts/seed_demo.py",
+    "dev:cloudflare": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -25,9 +27,10 @@
     "@types/react-dom": "^18.3.1",
     "prettier": "^3.9.10",
     "typescript": "~5.6.3",
-    "vite": "^6.4.4"
+    "vite": "^6.4.4",
+    "wrangler": "^4.150.0"
   },
   "engines": {
-    "node": "^20.0.0 || >=22.0.0"
+    "node": ">=22.0.0"
   }
 }

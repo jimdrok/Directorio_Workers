@@ -1,6 +1,6 @@
 # La Guaira Conecta
 
-MVP local de un directorio de trabajadores y servicios de La Guaira. Interfaz en español, adaptable a celulares. Frontend con React, TypeScript estricto y Vite. Backend con Python 3.10 o superior y SQLite. Requiere Node.js 20 LTS o 22 y posteriores y npm.
+MVP local de un directorio de trabajadores y servicios de La Guaira. Interfaz en español, adaptable a celulares. Frontend con React, TypeScript estricto y Vite. Backend con Python 3.10 o superior y SQLite. Requiere Node.js 22 o posterior y npm.
 
 ## Iniciar
 
@@ -65,3 +65,20 @@ Variables opcionales: `PORT` (3000), `DATABASE_PATH` (ruta SQLite), `COOKIE_SECU
 `npm run seed:demo` agrega nueve trabajadores ficticios, uno por categoría inicial. El comando puede repetirse sin reemplazar perfiles existentes. Se muestran como demostración y el contacto por WhatsApp está desactivado. Las parroquias de cobertura varían entre ejemplos para permitir probar los filtros. Cada ficha incluye servicios, años de experiencia, trayectoria, formación y un testimonio ficticio. No se usan fotografías de personas reales.
 
 Para gestionar un ejemplo, ingresa con el correo `<oficio>@ejemplo.invalid` y contraseña `guaria2026`. Los identificadores de oficio son: `plomeria`, `albanileria`, `estilismo`, `pintura`, `electricidad`, `costura`, `carpinteria`, `refrigeracion` y `limpieza`. La cuenta `admin` permite ocultarlos o restaurarlos desde Administración.
+
+## Cloudflare Workers: frontend y API juntos
+
+El despliegue debe usar `wrangler.jsonc`, no publicar únicamente `dist/`. El Worker sirve `/api/*`; los archivos estáticos sirven React. Los datos y sesiones se almacenan en un Durable Object persistente con SQLite, independiente del SQLite local de Python. La migración `v1` crea el almacenamiento al desplegar; no requiere copiar identificadores de bases de datos.
+
+En el panel de Cloudflare Workers configura:
+
+- Comando de compilación: `npm run build`
+- Comando de despliegue: `npx wrangler deploy`
+- Versión de Node: 22 o posterior
+- Directorio raíz: la carpeta que contiene `wrangler.jsonc`
+
+Desde una terminal autenticada en Cloudflare también puedes usar `npm run deploy`. Para probar el Worker local: `npm run dev:cloudflare`, abrir http://localhost:8787. Para probar la integración: `WORKER_TEST_URL=http://localhost:8787 python3 -m unittest discover -s tests -p test_cloudflare.py -v`.
+
+En el primer arranque se crean el administrador (`admin` / `guaria2026`) y nueve perfiles ficticios. Las cuentas de ejemplo conservan los correos descritos arriba. El almacenamiento local de Wrangler y el de producción son independientes. Los datos de `data/directorio.sqlite` no se migran automáticamente. `ADMIN_EMAIL` y `ADMIN_PASSWORD` pueden configurarse como secretos **antes del primer arranque** para sustituir la cuenta predeterminada. Las contraseñas del Worker se derivan con PBKDF2-SHA256 y las cookies de producción usan Secure.
+
+Si aparece HTML en una solicitud `/api/config`, verifica que se haya desplegado el Worker y que `assets.run_worker_first` incluya `/api/*`. Publicar solo los archivos estáticos no ejecuta el backend Python ni el Worker.

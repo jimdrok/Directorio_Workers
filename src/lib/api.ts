@@ -20,6 +20,12 @@ async function request<T>(
     body: data === undefined ? undefined : JSON.stringify(data),
     signal,
   });
+  if (!response.headers.get('Content-Type')?.includes('application/json')) {
+    throw new ApiError(
+      'La API no está disponible. Revisa que el backend esté incluido en el despliegue.',
+      503,
+    );
+  }
   const result = await response.json();
   if (!response.ok)
     throw new ApiError(result.error ?? 'No pudimos completar la solicitud.', response.status);
