@@ -7,7 +7,7 @@
     "dev": "node scripts/dev.mjs",
     "dev:frontend": "vite --host 127.0.0.1",
     "dev:api": "python3 server.py",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && node scripts/copy-docs.mjs",
     "start": "python3 server.py",
     "typecheck": "tsc --noEmit",
     "test": "python3 -m unittest discover -s tests -v",
@@ -15,7 +15,8 @@
     "format:check": "prettier --check src worker scripts index.html vite.config.ts tsconfig.json package.json",
     "seed:demo": "python3 scripts/seed_demo.py",
     "dev:cloudflare": "npm run build && wrangler dev",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "docs:generate": "python3 scripts/build-schema-docs.py"
   },
   "dependencies": {
     "react": "^18.3.1",

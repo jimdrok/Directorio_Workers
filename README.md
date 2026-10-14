@@ -84,3 +84,11 @@ En el primer arranque se crean el administrador (`admin` / `guaria2026`) y nueve
 Si aparece HTML en una solicitud `/api/config`, verifica que se haya desplegado el Worker y que `assets.run_worker_first` incluya `/api/*`. Publicar solo los archivos estáticos no ejecuta el backend Python ni el Worker.
 
 Workers Builds no aplica la compilación personalizada de Wrangler. Si el registro salta directamente de instalar dependencias a `npx wrangler deploy`, cambia el comando de despliegue del panel a `npm run deploy` o configura explícitamente el comando de compilación `npm run build`. La compilación personalizada en `wrangler.jsonc` cubre las ejecuciones locales de Wrangler.
+
+## Documentación de la arquitectura Supabase
+
+La nueva arquitectura propuesta está en `docs/index.html`: tablas y columnas, relaciones, módulos, flujos y permisos. Se puede abrir directamente, sin servidor. Al compilar, la documentación se copia a `dist/docs/` y está disponible en `/docs/index.html` en el despliegue. Para verla con Vite: http://localhost:5173/docs/index.html.
+
+Documentos de soporte: `docs/arquitectura.md`, `docs/modulos.md`, `docs/backend.md` y propuesta SQL `docs/supabase/schema.sql`. Son una base de diseño: no se ha conectado Supabase ni cambiado el backend actual. El SQL cierra mutaciones hasta implementar y probar las RPC.
+
+Para actualizar el diccionario visual después de editar el SQL: `npm run docs:generate`. Revisar las descripciones y relaciones generadas antes de compilar. La compilación Cloudflare copia documentos ya generados y no requiere Python.
