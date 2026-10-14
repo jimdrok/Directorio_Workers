@@ -1,0 +1,21 @@
+:root {
+  --ink: #173f3c;
+  --green: #156b56;
+  --cream: #f7f6ef;
+  --line: #dce3d9;
+  --muted: #64746a;
+  --color-surface: #fff;
+  --color-danger: #a33224;
+  --color-focus: #dd9c35;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-sm: 7px;
+  --radius-md: 12px;
+  --content-width: 1200px;
+  --font-body: 'DM Sans', sans-serif;
+  --font-heading: 'Manrope', sans-serif;
+}

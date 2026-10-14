@@ -1,0 +1,33 @@
+{
+  "name": "la-guaira-conecta",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:frontend": "vite --host 127.0.0.1",
+    "dev:api": "python3 server.py",
+    "build": "tsc --noEmit && vite build",
+    "start": "python3 server.py",
+    "typecheck": "tsc --noEmit",
+    "test": "python3 -m unittest discover -s tests -v",
+    "format": "prettier --write src scripts index.html vite.config.ts tsconfig.json package.json",
+    "format:check": "prettier --check src scripts index.html vite.config.ts tsconfig.json package.json",
+    "seed:demo": "python3 scripts/seed_demo.py"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "prettier": "^3.9.10",
+    "typescript": "~5.6.3",
+    "vite": "^6.4.4"
+  },
+  "engines": {
+    "node": "^20.0.0 || >=22.0.0"
+  }
+}
