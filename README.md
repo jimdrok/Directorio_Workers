@@ -73,7 +73,7 @@ El despliegue debe usar `wrangler.jsonc`, no publicar únicamente `dist/`. El Wo
 En el panel de Cloudflare Workers configura:
 
 - Comando de compilación: `npm run build`
-- Comando de despliegue: `npx wrangler deploy`
+- Comando de despliegue: `npm run deploy` (compila antes de desplegar, incluso si no hay comando de compilación separado)
 - Versión de Node: 22 o posterior
 - Directorio raíz: la carpeta que contiene `wrangler.jsonc`
 
@@ -82,3 +82,5 @@ Desde una terminal autenticada en Cloudflare también puedes usar `npm run deplo
 En el primer arranque se crean el administrador (`admin` / `guaria2026`) y nueve perfiles ficticios. Las cuentas de ejemplo conservan los correos descritos arriba. El almacenamiento local de Wrangler y el de producción son independientes. Los datos de `data/directorio.sqlite` no se migran automáticamente. `ADMIN_EMAIL` y `ADMIN_PASSWORD` pueden configurarse como secretos **antes del primer arranque** para sustituir la cuenta predeterminada. Las contraseñas del Worker se derivan con PBKDF2-SHA256 y las cookies de producción usan Secure.
 
 Si aparece HTML en una solicitud `/api/config`, verifica que se haya desplegado el Worker y que `assets.run_worker_first` incluya `/api/*`. Publicar solo los archivos estáticos no ejecuta el backend Python ni el Worker.
+
+Workers Builds no aplica la compilación personalizada de Wrangler. Si el registro salta directamente de instalar dependencias a `npx wrangler deploy`, cambia el comando de despliegue del panel a `npm run deploy` o configura explícitamente el comando de compilación `npm run build`. La compilación personalizada en `wrangler.jsonc` cubre las ejecuciones locales de Wrangler.

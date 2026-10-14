@@ -3,6 +3,10 @@
   "name": "la-guaira-conecta",
   "main": "worker/index.ts",
   "compatibility_date": "2026-10-13",
+  "build": {
+    "command": "npm run build",
+    "watch_dir": ["src", "worker", "index.html", "vite.config.ts"]
+  },
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
